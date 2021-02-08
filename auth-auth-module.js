@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<mat-card class=\"\">\r\n    <div *ngIf=\"isLogin\">\r\n      <h3>Login</h3>\r\n      <button\r\n      (click)=\"changeType('signup')\"\r\n      mat-stroked-button>\r\n        Create an account\r\n      </button>\r\n    </div>\r\n    <div *ngIf=\"isSignup\">\r\n      <h3>Signup</h3>\r\n      <button\r\n      (click)=\"changeType('login')\"\r\n      mat-stroked-button>\r\n        Already have an account?\r\n      </button>\r\n    </div>\r\n    <div *ngIf=\"isPasswordReset\">\r\n      <h3>Reset Password</h3>\r\n      <button\r\n      mat-stroked-button\r\n      (click)=\"changeType('login')\"\r\n      >\r\n        Back\r\n      </button>\r\n    </div>\r\n      <form [formGroup]=\"form\" (ngSubmit)=\"onSubmit()\">\r\n        <mat-form-field [color]=\"name?.valid && 'primary'\">\r\n          <input matInput\r\n          formControlName=\"name\"\r\n          type=\"text\"\r\n          autocomplete=\"off\"\r\n          placeholder=\"Name\"\r\n          >\r\n          <mat-error *ngIf=\"email?.invalid && email?.dirty\">\r\n            Enter a valid email address\r\n          </mat-error>\r\n        </mat-form-field>\r\n        <mat-form-field [color]=\"email?.valid && 'primary'\">\r\n          <input matInput\r\n          formControlName=\"email\"\r\n          type=\"email\"\r\n          autocomplete=\"off\"\r\n          placeholder=\"Email\"\r\n          >\r\n          <mat-error *ngIf=\"email?.invalid && email?.dirty\">\r\n            Enter a valid email address\r\n          </mat-error>\r\n        </mat-form-field>\r\n  \r\n  \r\n        <mat-form-field\r\n        *ngIf=\"!isPasswordReset\"\r\n        [color]=\"password?.valid && 'primary'\">\r\n          <input matInput\r\n          formControlName=\"password\"\r\n          type=\"password\"\r\n          autocomplete=\"off\"\r\n          placeholder=\"Password\"\r\n          >\r\n          <mat-error *ngIf=\"password?.invalid && password?.dirty\">\r\n            Password must be atleast 6 characters long\r\n          </mat-error>\r\n        </mat-form-field>\r\n  \r\n  \r\n        <mat-form-field\r\n        \r\n        *ngIf=\"!isPasswordReset && !isLogin\"\r\n        [color]=\"password?.valid && 'primary'\">\r\n        \r\n          <input matInput\r\n          formControlName=\"confirmPassword\"\r\n          type=\"password\"\r\n          autocomplete=\"off\"\r\n          placeholder=\"Confirm Password\"\r\n          >\r\n          <mat-error *ngIf=\"passwordConfirm?.dirty && !passwordDoesMatch\">\r\n            Password does not match\r\n          </mat-error>\r\n        </mat-form-field>\r\n        <mat-error\r\n        class=\"server-error\"> {{serverMessage}}</mat-error>\r\n        <button\r\n        style=\"margin-bottom: 20px;\"\r\n        mat-raised-button\r\n        color=\"accent\"\r\n        type=\"submit\"\r\n  \r\n        [disabled]=\"form.invalid || !passwordDoesMatch || loading\"\r\n        >\r\n          Submit\r\n        </button>\r\n      </form>\r\n      <a\r\n      class=\"text-primary\"\r\n      style=\"margin-top: 20px; padding-top: 20px;\"\r\n      (click)=\"changeType('reset')\"> Forgot Password</a>\r\n  \r\n  </mat-card>\r\n  ");
+/* harmony default export */ __webpack_exports__["default"] = ("<mat-card class=\"\">\r\n    <div *ngIf=\"isLogin\">\r\n      <h3>Login</h3>\r\n      <button\r\n      (click)=\"changeType('signup')\"\r\n      mat-stroked-button>\r\n        Create an account\r\n      </button>\r\n    </div>\r\n    <div *ngIf=\"isSignup\">\r\n      <h3>Signup</h3>\r\n      <button\r\n      (click)=\"changeType('login')\"\r\n      mat-stroked-button>\r\n        Already have an account?\r\n      </button>\r\n    </div>\r\n    <div *ngIf=\"isPasswordReset\">\r\n      <h3>Reset Password</h3>\r\n      <button\r\n      mat-stroked-button\r\n      (click)=\"changeType('login')\"\r\n      >\r\n        Back\r\n      </button>\r\n    </div>\r\n      <form [formGroup]=\"form\" (ngSubmit)=\"onSubmit()\">\r\n        <mat-form-field \r\n        *ngIf=\"isSignup\"\r\n        [color]=\"name?.valid && 'primary'\">\r\n          <input matInput\r\n          formControlName=\"name\"\r\n          type=\"text\"\r\n          autocomplete=\"off\"\r\n          placeholder=\"Name\"\r\n          >\r\n          <mat-error *ngIf=\"email?.invalid && email?.dirty\">\r\n            Enter a valid email address\r\n          </mat-error>\r\n        </mat-form-field>\r\n        <mat-form-field [color]=\"email?.valid && 'primary'\">\r\n          <input matInput\r\n          formControlName=\"email\"\r\n          type=\"email\"\r\n          autocomplete=\"off\"\r\n          placeholder=\"Email\"\r\n          >\r\n          <mat-error *ngIf=\"email?.invalid && email?.dirty\">\r\n            Enter a valid email address\r\n          </mat-error>\r\n        </mat-form-field>\r\n  \r\n  \r\n        <mat-form-field\r\n        *ngIf=\"!isPasswordReset\"\r\n        [color]=\"password?.valid && 'primary'\">\r\n          <input matInput\r\n          formControlName=\"password\"\r\n          type=\"password\"\r\n          autocomplete=\"off\"\r\n          placeholder=\"Password\"\r\n          >\r\n          <mat-error *ngIf=\"password?.invalid && password?.dirty\">\r\n            Password must be atleast 6 characters long\r\n          </mat-error>\r\n        </mat-form-field>\r\n  \r\n  \r\n        <mat-form-field\r\n        \r\n        *ngIf=\"!isPasswordReset && !isLogin\"\r\n        [color]=\"password?.valid && 'primary'\">\r\n        \r\n          <input matInput\r\n          formControlName=\"confirmPassword\"\r\n          type=\"password\"\r\n          autocomplete=\"off\"\r\n          placeholder=\"Confirm Password\"\r\n          >\r\n          <mat-error *ngIf=\"passwordConfirm?.dirty && !passwordDoesMatch\">\r\n            Password does not match\r\n          </mat-error>\r\n        </mat-form-field>\r\n        <mat-error\r\n        class=\"server-error\"> {{serverMessage}}</mat-error>\r\n        <button\r\n        style=\"margin-bottom: 20px;\"\r\n        mat-raised-button\r\n        color=\"accent\"\r\n        type=\"submit\"\r\n  \r\n        [disabled]=\"form.invalid || !passwordDoesMatch || loading || !nameNotNeeded\"\r\n        >\r\n          Submit\r\n        </button>\r\n      </form>\r\n      <a\r\n      class=\"text-primary\"\r\n      style=\"margin-top: 20px; padding-top: 20px;\"\r\n      (click)=\"changeType('reset')\"> Forgot Password</a>\r\n  \r\n  </mat-card>\r\n  ");
 
 /***/ }),
 
@@ -208,7 +208,7 @@ var AuthRoutingModule = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-content\">\n  <div class=\"container-fluid\">\n    <div >\n      <button mat-raised-button appGoogleSignIn>\n        <img src=\"/assets/google-logo.svg\" > Login with google\n      </button>\n        <h5>OR</h5>\n      <app-email-sign-in></app-email-sign-in>\n    </div>\n  </div>\n  </div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-content\">\n  <div class=\"container-fluid\">\n    <div >\n      <!-- <button mat-raised-button appGoogleSignIn>\n        <img src=\"/assets/google-logo.svg\" > Login with google\n      </button>\n        <h5>OR</h5> -->\n      <app-email-sign-in></app-email-sign-in>\n    </div>\n  </div>\n  </div>\n");
 
 /***/ }),
 
@@ -438,7 +438,7 @@ var EmailSignInComponent = /** @class */ (function () {
     ;
     EmailSignInComponent.prototype.ngOnInit = function () {
         this.form = this.fb.group({
-            name: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required]],
+            name: ['', []],
             email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].email]],
             password: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].minLength(6)]],
             confirmPassword: ['', []]
@@ -509,6 +509,18 @@ var EmailSignInComponent = /** @class */ (function () {
         enumerable: false,
         configurable: true
     });
+    Object.defineProperty(EmailSignInComponent.prototype, "nameNotNeeded", {
+        get: function () {
+            if (this.type !== 'signup') {
+                return true;
+            }
+            else {
+                return this.name.value != '';
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
     EmailSignInComponent.prototype.onSubmit = function () {
         var _a, _b, _c, _d;
         return __awaiter(this, void 0, void 0, function () {
@@ -540,6 +552,7 @@ var EmailSignInComponent = /** @class */ (function () {
                     case 3:
                         _e.sent();
                         this.uiElementsService.addSnackBar('Welcome ' + name);
+                        this.uiElementsService.removeSpinner();
                         this.router.navigate(['/profile']);
                         _e.label = 4;
                     case 4:
@@ -549,6 +562,7 @@ var EmailSignInComponent = /** @class */ (function () {
                         _e.sent();
                         // this.snackService.authSuccess('Login');
                         this.uiElementsService.addSnackBar('Welcome');
+                        this.uiElementsService.removeSpinner();
                         this.router.navigate(['/profile']);
                         _e.label = 6;
                     case 6:
@@ -556,12 +570,14 @@ var EmailSignInComponent = /** @class */ (function () {
                         return [4 /*yield*/, this.angularFireAuth.sendPasswordResetEmail(email)];
                     case 7:
                         _e.sent();
+                        this.uiElementsService.removeSpinner();
                         this.uiElementsService.addSnackBar('Check your Emails for the link');
                         _e.label = 8;
                     case 8: return [3 /*break*/, 10];
                     case 9:
                         error_1 = _e.sent();
                         this.serverMessage = error_1;
+                        this.uiElementsService.removeSpinner();
                         return [3 /*break*/, 10];
                     case 10:
                         this.loading = false;
